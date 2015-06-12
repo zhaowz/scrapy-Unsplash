@@ -2,8 +2,9 @@
 爬取unsplash上的壁纸
 
 ##思路
-1.爬取 [最美壁纸][1] 的第一屏（未解决瀑布流问题）壁纸
-2.使用scrapy框架进行网页解析，得到图片链接
+1、爬取 [最美壁纸][1] 的第一屏（未解决瀑布流问题）壁纸
+
+2、使用scrapy框架进行网页解析，得到图片链接
 zzSpider.py：
 ```python
 class zzSpider(scrapy.spider.Spider):
@@ -41,5 +42,5 @@ for i,site in enumerate(sites):
 print "download over"
 ```
 ##存在问题
-1. urlopen对https解析，在python3以下存在问题（暂时用http代替解析）
-2. 瀑布流，无法进一步提取接下来的图片
+1、urlopen对https解析，在python3以下存在问题（暂时用http代替解析）
+2、 瀑布流，无法进一步提取接下来的图片
