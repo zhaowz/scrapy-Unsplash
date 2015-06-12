@@ -35,11 +35,11 @@ for i,site in enumerate(sites):
     print url
     u=urllib2.urlopen(url)
     data=u.read()
-    downFile=open("./tmp"+"//"+str(i)+".png","wb")   #当前路径下建立tmp文件夹，保存图片   /tmp/1.jpg
+    downFile=open("./tmp"+"//"+str(i)+".png","wb") #当前路径下建立tmp文件夹，保存图片   /tmp/1.jpg
     downFile.write(data)
     downFile.close()
 print "download over"
 ```
 ##存在问题
-1.urlopen对https解析，在python3以下存在问题（暂时用http代替解析）
-2.瀑布流，无法进一步提取接下来的图片
+1. urlopen对https解析，在python3以下存在问题（暂时用http代替解析）
+2. 瀑布流，无法进一步提取接下来的图片
